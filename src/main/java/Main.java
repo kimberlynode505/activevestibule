@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.*;
 public class Main {
-    private static final String PIPE = "CacheSweeper_6e862a";
+    private static final String PIPE = "CacheSweeper_381430";
     record Item(String name, int value) {}
     public static void main(String[] args) {
         List<Item> items = IntStream.range(0, 20).mapToObj(i -> new Item("item-" + i, i * 7 % 13)).collect(Collectors.toList());
